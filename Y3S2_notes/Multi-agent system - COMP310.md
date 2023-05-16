@@ -550,3 +550,144 @@ Notes for preparing MAS exams.
 
  ## Chapter 15: Bargaining / Negotiation
 
+- **Auctions** are only concerned with the **allocation of goods**;  **Negotiation** is the process of **reaching agreements on matters of common**
+
+- negotiation:
+
+  - **negotiation set**: possible proposals that agents can make
+  - **protocol**: defines what legal proposals an agent can make
+  - **collection of strategies**: one for each agent, which are typically private
+  - **rule**:  determines **when** a deal has been struck and **what** the agreement deal is
+  - Negotiation usually proceeds  proceeds in a series of rounds
+
+- **single-issue, symmetric, one-to-one negotiation** settings are in COMP310
+
+- Rubinstein’s alternating offers:
+
+  - ![image-20230516160741451](./Multi-agent system - COMP310.assets/image-20230516160741451.png)
+
+  - If there is **no agreement**, we say the result is the **conflict deal** $\Theta$ 
+
+- Impatient Players:
+  ![image-20230516161904724](./Multi-agent system - COMP310.assets/image-20230516161904724.png)
+
+  ![image-20230516162402806](./Multi-agent system - COMP310.assets/image-20230516162402806.png)
+
+- Negotiation Decision Functions:
+  - Boulware: Very **slow initial decrease** in price until close to deadline and then an exponential decrease
+  - Conceder: **Makes its concessions early**, and makes fewer concessions later in the negotiation
+    ![image-20230516163117333](./Multi-agent system - COMP310.assets/image-20230516163117333.png)
+
+- **Task-Oriented Domains (TODs)**:
+  
+  - Formally: A TOD is a tuple $\langle T, Ag, c \rangle$ , 
+    where, $Ag = \{1,...,n\}$ denotes the participant agents,
+    the task set for all possible tasks $T$  
+    the cost of each subtasks $c: 2^T \to \mathbb{R}^+$ , is **monotonic** and $c(\empty) = 0$
+  - An **encounter** is a collection of tasks $\langle T_1, ..., T_n\rangle$  , where $T_i\subseteq T$ for each agent $i \in Ag$ 
+  
+- Deals in TODs"
+  - deal $\delta = \langle D_1, D_2 \rangle $ for encounter $\langle T_1, T_2 \rangle$  , agent $i$ cost: $c(D_i)$
+  - utility of the deal $\delta$ for agent $i$ : $utility_i(\delta) = c(T_i) -c(D_i) $
+  - For conflict deal $\Theta $ , $untility_i(\Theta) =0$ , for all agents
+  - **dominate deal** $\delta_1 \succ \delta_2$: $ \Bigl\{ \begin{aligned} \forall i\in\{1,2\}, utility_i(\delta_1) \geq utility_i(\delta_2) \\ 
+    \exist i\in\{1,2\}, utility_i(\delta_1) > utility_i(\delta_2) \end{aligned}$
+  - A deal that is **not dominated** by any other deal is **Pareto optimal**
+
+- **Negotiation Set**: 
+  - **Individual rational**: agents won’t be interested in deals that give negative utility since they will prefer the conflict deal
+  - **Pareto optimal**: agents can always transform a non-Pareto optimal deal into Pareto optimal deal by making one agent happier and none of the others worse off
+    ![image-20230516171656387](./Multi-agent system - COMP310.assets/image-20230516171656387.png)
+
+- Monotonic Concession Protocol: 
+  - Negotiation proceeds in rounds $u$ where $u \geq 0 $  
+  - On the first round:
+    - Both agents **simultaneously** propose a deal from the negotiation set
+    - Agreement is reached if one agent finds that the deal proposed by the other is at least as good or better than its proposal
+    - If no agreement is reached, then negotiation proceeds to another round of simultaneous proposals
+  - In round $u + 1$: 
+    - Each agent either **concedes** by making a proposal that is better for the other agent than its previous offer, or wait
+    - No agent is allowed to make a proposal that is less preferred by the other agent than the deal it proposed at time $u$ 
+  - negotiation is guaranteed to end after a finite number of rounds
+
+- Zeuthen strategy: determine **who** should concede and **how much** in each round, in **Nash Equilibrium**
+
+  - Key idea: evaluate an agent’s **willingness to risk conflict**
+  - Agent $i'$s **willingness to risk conflict** at round $t$, denoted $risk_i^t$, can be measured as:
+    $\large risk_i^t = \Bigl\{ \begin{aligned} 
+    &1 & \text{if }utility_i (\delta_i^t) =0, \\ &\frac{utility_i(\delta_i^t) - utility_i(\Theta)}{utility_i(\delta_i^t)} & otherwise  
+    \end{aligned} \Bigr. $
+  
+  - agent can start by proposing its **most preferred deal**,  Concede whenever its **willingness to risk conflict value** $\leq$ to the other agent's
+  - If an agreement is reached, it is guaranteed that this agreement will be **individual rational** and **Pareto optimal**
+
+- Ways to be benefited of Deception in TODs:
+  - Phantom and Decoy tasks:  can be prevented by ensuring that tasks are **verifiable**
+  - Hidden tasks: 
+
+## Chapter 16: Argumentation
+
+- Argumentation:  principled techniques for resolving with **inconsistencies** with beliefs of multiple agents
+- **Dung’s Argumentation System (Abstract argumentation)**: 
+  - $q \to p$, means argument $q$ attacks argument $p$ 
+  - a set of Dung-style arguments: $\langle \sum, \vartriangleright \rangle$ :
+    - $\sum$ : set of arguments
+    - $\vartriangleright$ : set of attacks between arguments in $\sum$ 
+    - $(\varphi, \psi) \in \vartriangleright$: the relationship: $\varphi$ attacks $\psi$ 
+  - Example: $\langle \{p,q,s,r\},\{{\langle r,q \rangle}, {\langle s,q \rangle}, {\langle q,p \rangle}\} \rangle$
+    ![image-20230516214042673](./Multi-agent system - COMP310.assets/image-20230516214042673.png)
+
+- **Type of Positions**: 
+  - **Position**: $S \subseteq \sum$ denotes a set of arguments
+  - **Conflict free positions**: no member of S attacks an other member of S. e.g. $\empty,\{p\},\{q\},\{r\},\{s\}, \{r,s\}, \{p,r\},\{p,s\},\{r,s,p\}$ in previous $\sum$
+  - **mutually defensive positions**: every element of S that is attacked is defended by some element of S.
+    e.g.  $\empty,\{r\},\{s\}, \{r,s\}, \{p,r\},\{p,s\},\{r,s,p\}$ 
+  - **Admissible Positions**: both conflict free and mutually defensive, it is a minimal notion of a reasonable position
+  - **Preferred Extension**: a maximal admissible set $S$. if $S$  is admissible and **no superset** of $S$ is admissible . 
+    e.g. $\{r,s,q\}$ is a preferred extension, others are not
+    ![image-20230516222146596](./Multi-agent system - COMP310.assets/image-20230516222146596.png)
+- Argument acceptance:
+  - **sceptically** accepted argument: a member of **every preferred extension** 
+  - **credulously** accepted argument: a member of **at least one preferred extension**
+- Grounded Extensions - a progress:
+  - keep $IN$s, that have no attackers
+  - eliminate $OUT$, that is attacked by $IN$s 
+  - There is **always** a grounded extension, and it is **always unique**
+- Full example:
+  ![image-20230516224421331](./Multi-agent system - COMP310.assets/image-20230516224421331.png)
+
+- **Deductive Argumentation**,  are defeasible reasoning by logical formulating arguments
+  ![image-20230516224819498](./Multi-agent system - COMP310.assets/image-20230516224819498.png)
+
+  - Formally, a **deductive argument** is a pair $(S,p)$ over a database $\sum$ 
+  - $\sum$ : a set of logical formulae, the available 'evidence'
+  - $p$ : a conclusion, a logical formulae
+  - $S $: the grounds or support, a set of logical formulae
+    - $S\subseteq \sum$ 
+    - $S \vdash p$ 
+    - no such $S'$ that $S' \subset S$ and $S' \vdash p$ 
+
+  ![image-20230516225730713](./Multi-agent system - COMP310.assets/image-20230516225730713.png)
+
+  - **Rebut**: $(S_2, p_2)$ rebuts $(S_2, p_1)$  if $p_2\equiv \neg p_1$
+  - **Undercut**: $(S_2,p_2)$ undercuts $(S_1, p_1)$ if $p_2 \equiv \neg q_1$ for some $q_1 \in S_1$ 
+    ![image-20230516230419503](./Multi-agent system - COMP310.assets/image-20230516230419503.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
