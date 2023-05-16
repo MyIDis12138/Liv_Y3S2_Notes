@@ -101,7 +101,7 @@ This is notes of COMP313, Formal Method, which is sorted by lectures.
     Term: 			$n*2$
 
 - **Cartesian Product** $A \times B$  denotes the set of **ordered** pairs 𝑎, 𝑏 that 𝑎 ∈ 𝐴 and 𝑏 ∈ 𝐵
-  ![image-20230424181948336](F:\Y3S2_notes\Formal Method - COMP313.assets\image-20230424181948336.png)
+  ![image-20230424181948336](.\Formal Method - COMP313.assets\image-20230424181948336.png)
   NB: $(S_1 \times S_2) \ne (S_2 \times S_1)$ , and $A \times \empty = \empty \times B = \empty$ 
 
 ## Lecture 5: Functions in Z
@@ -125,9 +125,9 @@ This is notes of COMP313, Formal Method, which is sorted by lectures.
   - **Range restriction**
     Notation: $\large S \vartriangleright f$ , the function obtained from 𝑓, by removing from it all maplets$ 𝑥 ↦ 𝑦$ such that y ∉ 𝑆
   - **Domain Subtraction**
-    Notation: ![image-20230502163853587](F:\Y3S2_notes\Formal Method - COMP313.assets\image-20230502163853587.png),  the function obtained from 𝑓, by removing from it all maplets 𝑥 ↦ 𝑦 such that 𝑥 ∈ 𝑆
+    Notation: ![image-20230502163853587](.\Formal Method - COMP313.assets\image-20230502163853587.png),  the function obtained from 𝑓, by removing from it all maplets 𝑥 ↦ 𝑦 such that 𝑥 ∈ 𝑆
   - **Domain Subtraction**
-    Notation: ![image-20230502164041610](F:\Y3S2_notes\Formal Method - COMP313.assets\image-20230502164041610.png),  the function obtained from 𝑓, by removing from it all maplets 𝑥 ↦ 𝑦 such that y ∈ 𝑆
+    Notation: ![image-20230502164041610](.\Formal Method - COMP313.assets\image-20230502164041610.png),  the function obtained from 𝑓, by removing from it all maplets 𝑥 ↦ 𝑦 such that y ∈ 𝑆
   - **Function Overriding**
     Notation: $ f_1\oplus f_2$ , the function obtained from $f_1$, by replacing from it all maplets 𝑥 ↦ 𝑦 such that 𝑥 in $f_2$ 
 
@@ -139,11 +139,11 @@ This is notes of COMP313, Formal Method, which is sorted by lectures.
 
 - **Schemas**:  the most distinctive feature of the Z specification language, **describe both state spaces and operations**.
 
-​		![image-20230502165125814](F:\Y3S2_notes\Formal Method - COMP313.assets\image-20230502165125814.png)
+​		![image-20230502165125814](.\Formal Method - COMP313.assets\image-20230502165125814.png)
 
 - Declarations: Define the **variables** or **functions** used in predicates. Or including  other **schemas**. 
 
-​		![image-20230502165908076](F:\Y3S2_notes\Formal Method - COMP313.assets\image-20230502165908076.png)
+​		![image-20230502165908076](.\Formal Method - COMP313.assets\image-20230502165908076.png)
 
 - **operation **schema (modifying, '$\Delta $' or non-modifying,  '$\Xi$' ) :
   - the variables that are **accessed**: **remain unchanged** or **may be altered**

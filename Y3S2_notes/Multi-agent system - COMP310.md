@@ -508,9 +508,45 @@ Notes for preparing MAS exams.
     &v_i - max_{j\neq i}b_j & \text{if } b_i > max_{j \neq i} b_j \\
     &0 & \text{otherwise}
     \end{aligned} \Bigr.$
-  - a **dominant strategy** for each bidder to bid their true valuation, making it possible for **antisocial** behaviour
+  - a **dominant strategy** for each bidder to bid their true valuation, making it possible for **antisocial** behavior
 - None of the auction types discussed so far are immune to **collusion**:
   - A grand coalition of bidders can agree beforehand to collude
   - An auctioneer could employ bogus bidders
 - **Combinatorial Auctions**: auction for bundles of goods
-  - 
+  - valuation function: the value of bundles of goods
+  - free disposal: an agent is never worse off having more stuff
+  - outcome: an allocation of goods being auctioned among the agents, no need to be allocated
+- social welfare function:
+  $\large sw(\underset{allocations}{Z_1, ..., Z_n },\underset{valuations}{ v_1, ..., v_n} ) = \sum _{i=1}^n v_i(Z_i)$ 
+
+- Combinatorial auction:
+  $\large Z^*_1, ..,Z^*_n=\underset{(Z_1,..,Z_n)\in alloc(\mathcal{Z}, Ag)}{argmax} sw(Z_1,...,Z_n, v_1,...,v_n)$ 
+  - where $\mathcal{Z}$ is a set of goods, the goal is to find an allocation $Z_1^*, ..,Z_n^* $ that maximizes $sw$, the collection of valuation functions $v_1,..,v_n$ for each agent $i\in Ag$ 
+  - Determining the winner is a **combinatorial optimization problem** (NP-hard)
+
+- An **atomic bid**  $\beta = (Z,p)$, where $p = v_\beta(Z)$ is the price the bidder is prepared to pay for the bundle $Z$, a bundle $Z'$ **satisfies** an atomic bid $(Z,p)$ if $Z\subseteq Z'$ 
+
+- XOR Bids: pay for at most one of the bundles
+
+  $\beta = (Z_1,p_1) XOR...XOR(Z_k,p_k)$
+  ![image-20230516001101791](./Multi-agent system - COMP310.assets/image-20230516001101791.png)
+
+- OR Bids: prepared to pay for more than one bundle
+
+  -  $\beta = (Z_1,p_1) OR...OR(Z_k,p_k)$
+
+  - OR bids are strictly less expensive than XOR bids
+  - OR bids also suffer from computational complexity
+  - ![image-20230516001312493](./Multi-agent system - COMP310.assets/image-20230516001312493.png)
+
+- VCG Mechanism:
+
+  - **Indifferent valuation** function: $v^0(Z)=0$ for all $Z$ 
+  - the **social welfare function without agent $i$** : 
+    $\large sw_{-i}(Z_1,...,Z_n, v_1,...,v_n)= \underset{j\in Ag, j\neq i}{\sum} v_j(Z_j)$ , defines  how well everyone expect agent $i$ 
+  - the pays $p_i$ for agent $i$ is:
+    $\large p_i = sw_{-i}(Z_1,...,Z_n, v_1,..., v^0,...,v_n) $
+               $\large - sw_{-i}(Z_1^*,...,Z_n^*, v_1,...,v_i,...,v_n)$
+
+ ## Chapter 15: Bargaining / Negotiation
+
