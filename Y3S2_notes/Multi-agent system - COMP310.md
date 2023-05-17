@@ -398,9 +398,8 @@ Notes for preparing MAS exams.
 - **Borda Count**:  takes the whole preference order into account
   ![image-20230514142837474](./Multi-agent system - COMP310.assets/image-20230514142837474.png)
 
-- **social choice voting** or **Instant Runoff Voting**: Counting procedures in rounds, with the last
-  place candidate being eliminated, until there is a majority vote. Offers a solution to Condorcet’s paradox. Example is given in Chapter 12 P31-33.
-
+- **social choice voting** or **Instant Runoff Voting**: Counting procedures in rounds, with the last place candidate being eliminated, until there is a majority vote. Offers a solution to Condorcet’s paradox. Example is given in Chapter 12 P31-33.
+  
 - Desirable Properties of Voting Procedures:
   -  **Pareto property**:  if everybody prefers $w_i$ over $w_j$, then $w_i$ should be ranked over $w_j$ in the social outcome. Satisfied by plurality and Borda but not by sequential majority.
   - **Condorcet Winner condition**: if $w_i$ is a condorcet  winner, the $w_i$ should always be ranked first. However, of the ones we’ve seen, only sequential majority satisfies it
@@ -435,6 +434,8 @@ Notes for preparing MAS exams.
   - neither subadditive nor superadditive, The **characteristic function value calculations** need to be determined **for each of the possible coalition**
 
 - **Stability** is a **necessary** but **not** **sufficient** condition for coalitions to form
+
+- the **core** of a coalitional game: the set of **feasible distributions of payoff** to members of a coalition that **no sub-coalition can reasonably object** to. 
 
 - the stability of the grand coalition:
 
