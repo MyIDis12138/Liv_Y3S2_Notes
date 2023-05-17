@@ -4,8 +4,6 @@ Notes for preparing MAS exams.
 
 ## Chapter2: Intelligent Agents
 
-### Agents
-
 - Predicate Task Specifications:  specification that assigns Boolean utilities to agent runs, depending on whether the agent succeeded in its task for a run (i.e. the utility is or if it failed (i.e. the utility is 0). 
 - Task Environments: a pair of an environment and a Predicate Task Specification 
 - Tasks:
@@ -13,7 +11,7 @@ Notes for preparing MAS exams.
   - maintenance goal:  the agent succeeds in a maintenance task if it ensures that it is never forced into one of the fail states
 - **An agent** is a computer system that is situated in some environment, and that is capable of **autonomous** action in this environment in order to meet its delegated objectives
 
-### Properties of Environments
+- Properties of Environments
 
 - Fully observable vs. partially observable
   - **Fully observable**: the agent can obtain complete, accurate, up-to-date information about the environment’s state
@@ -38,7 +36,7 @@ Notes for preparing MAS exams.
     - The current decision affects future decisions
 - **Real time**: time plays a crucial part in evaluating an agent’s performance
 
-### Intelligent Agents
+- Intelligent Agents
 
 - exhibiting three types of behaviour:
   - **Reactive** (environment aware): maintains an ongoing interaction
@@ -48,7 +46,7 @@ Notes for preparing MAS exams.
 - Coordination:  managing inter-dependencies between the activities of agents
 - Negotiation: reach agreements on matters of common interest
 
-### Intentional Systems
+- Intentional Systems
 
 - **intentional stance**:  humans use different strategies or stances to explain and predict other entities’ behaviour
   **intentional stance** is **an abstraction tool** 
@@ -63,7 +61,7 @@ Notes for preparing MAS exams.
   The intentional stance description is useful when it helps us understand the structure of the machine, its past or future behaviour, or how to repair or improve it. It is useful when it helps us explain and predict a complex system’s behaviour without having to understand how the mechanism actually works.
   The main reason that the intentional stance description is useful is that it is a powerful abstraction tool. It allows us to abstract what is happening at the low level within a machine. So instead of describing knowledge a machine has as data stored within a data-structure, or concerning ourselves with the format, we can simply think of that knowledge as a set of beliefs.
 
-### Formal Agent 
+- Formal Agent 
 
 - A system is a **pair** containing **an agent** and **an environment**
 
@@ -176,23 +174,20 @@ Notes for preparing MAS exams.
 
 ### Reactive Systems
 
-- Agent Control Loop as Layers
+-  Agent Control Loop as Layers
   ![image-20230508163711663](.\Multi-agent system - COMP310.assets\image-20230508163711663.png)
-
-- Behaviours:
+-  Behaviours:
   -  Complex behaviour emerges from simple components.;
   - layer is independent;
   - Can then assemble them into a complete system
   - ![image-20230508163752740](.\Multi-agent system - COMP310.assets\image-20230508163752740.png)
-- Brooks Behavioural Languages:
+-  Brooks Behavioural Languages:
   - Situatedness and embodiment
   - Intelligence and emergence
-
-- Two defining characteristics of **Subsumption Architecture**:
+-  Two defining characteristics of **Subsumption Architecture**:
   - An agent’s decision-making process is realised through a set of **task-accomplishing behaviours**
   - Many behaviours can ‘fire’ **simultaneously**.
-
-- Limitations of Reactive Systems:
+-  Limitations of Reactive Systems:
   - the need of sufficient information of the local environment for determining actions
   - As actions are based on local information, such agents inherently take a “short-term” view.
   - Emergent behaviour is very hard to engineer or validate
