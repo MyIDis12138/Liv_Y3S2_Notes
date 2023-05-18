@@ -4,7 +4,7 @@ Notes for preparing MAS exams.
 
 ## Chapter2: Intelligent Agents
 
-- Predicate Task Specifications:  specification that assigns Boolean utilities to agent runs, depending on whether the agent succeeded in its task for a run (i.e. the utility is or if it failed (i.e. the utility is 0). 
+- **Predicate Task Specifications**:  specification that assigns Boolean utilities to agent runs, depending on whether the agent succeeded in its task for a run (i.e. the utility is or if it failed (i.e. the utility is 0). 
 - Task Environments: a pair of an environment and a Predicate Task Specification 
 - Tasks:
   - achievement tasks: The agent succeeds in an achievement task if it can force the environment into one of the goal states
@@ -85,10 +85,12 @@ Notes for preparing MAS exams.
 - **Symbolic Reasoning Agents**:  building agents is to view them as a particular type of knowledge-based system, and bring all the associated  methodologies of such systems to bear
 
 - Issues of Symbolic Reasoning Agents: 
+  - transduction problem: translating the real world into an accurate adequate useful symbolic description
 
-  - In general, many (most) research-based symbol manipulation algorithms of interest are **highly intractable**
+  - representation / reasoning problem: how to symbolically represent and process. How to get agent reason t=with the information 
+    - In general, many (most) research-based symbol manipulation algorithms of interest are **highly intractable**
 
-  - Hard to find compact **representations**
+    - Hard to find compact **representations**
 
 - **Deductive Reasoning Agents** : use logic to encode a theory stating the best action to perform in any given situation
 
@@ -134,11 +136,12 @@ Notes for preparing MAS exams.
   - **A** **plan for a given planning problem**: $B_0 \xrightarrow{\alpha_1} B_1 \xrightarrow{\alpha_2} ... \xrightarrow{\alpha_n} B_n  $ 
   
 - **Deliberate function**: 
+  
   - **Option generation**:  generates a set of possible alternatives
     $\large  options: \pmb{\mathscr{P}}(Bel) \times \pmb{\mathscr{P}}(Int) \to \pmb{\mathscr{P}}(Des)$ 
   - **Filtering**: chooses between competing alternatives
     $\large  options: \pmb{\mathscr{P}}(Bel) \times \pmb{\mathscr{P}}(Des)\times \pmb{\mathscr{P}}(Int) \to \pmb{\mathscr{P}}(Int)$ 
-
+  
 - Degrees of Commitment:
   - **Blind commitment**: continue to maintain an intention **until** it believes that the intention has actually been achieved
     **![image-20230508161852728](.\Multi-agent system - COMP310.assets\image-20230508161852728.png)**
@@ -290,7 +293,7 @@ Notes for preparing MAS exams.
     - Share the same optimisation target 
     - Problem-solving in benevolent systems is **Cooperative Distributed Problem Solving (CDPS)**
   - Self Interested Agents: 
-    - everyone optimise their own interests
+    - everyone optimize their own interests
     - Strategic behaviour to solve potential conflicts
 - **Cooperative Distributed Problem Solving:** studies how a loosely coupled network of problem solvers can work together to solve problems that are beyond their individual capabilities.
 - **Coherence**: how well the MA system behaves as a unit along some dimension of evaluation
@@ -310,7 +313,7 @@ Notes for preparing MAS exams.
 - Handling Inconsistency:
   - Forbidden, For example, in the contract net the only view that matters is that of the manager agent.
   - Resolve inconsistency, argumentation until resolve
-- **Social Norms**: rules of behaviour. Achieved by the **Constraint pairs**: $<E',\alpha>$ , a **social law** is **a set of these constrains**
+- **Social Norms**: rules of behavior. Achieved by the **Constraint pairs**: $<E',\alpha>$ , a **social law** is **a set of these constrains**
 - **Focal states**: $F \subseteq E$​ are the states we want our agent to be able to get to.  A **useful social law** is then one that does not prevent agents from getting from one focal state to another
 
 - **Joint Persistent Goal (JPG)** :  A group of agents have a collective commitment to bring about some goal $\varphi$ and motivation $\psi$   
@@ -668,22 +671,3 @@ Notes for preparing MAS exams.
   - **Rebut**: $(S_2, p_2)$ rebuts $(S_2, p_1)$  if $p_2\equiv \neg p_1$
   - **Undercut**: $(S_2,p_2)$ undercuts $(S_1, p_1)$ if $p_2 \equiv \neg q_1$ for some $q_1 \in S_1$ 
     ![image-20230516230419503](./Multi-agent system - COMP310.assets/image-20230516230419503.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
