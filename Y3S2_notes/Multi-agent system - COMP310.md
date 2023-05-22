@@ -55,11 +55,8 @@ Notes for preparing MAS exams.
 
 - Negotiation: reach agreements on matters of common interest
 
-- Intentional Systems
-
-- **intentional stance**:  humans use different strategies or stances to explain and predict other entities’ behaviour
-  **intentional stance** is **an abstraction tool** 
-
+- **intentional stance**:  humans use different strategies or stances to explain and predict other entities’ behaviour, **intentional stance** is **an abstraction tool** 
+  
 - **intentional system**: whose behaviour can be predicted by the method of attributing belief, desires and rational acumen
 
   - A **first-order** intentional system has beliefs and desires (etc.) but no beliefs and desires about beliefs and desires
@@ -99,7 +96,7 @@ Notes for preparing MAS exams.
 - Issues of Symbolic Reasoning Agents: 
   - transduction problem: translating the real world into an accurate adequate useful symbolic description
 
-  - representation / reasoning problem: how to symbolically represent and process. How to get agent reason t=with the information 
+  - representation / reasoning problem: how to symbolically represent and process. How to get agent reason with the information 
     - In general, many (most) research-based symbol manipulation algorithms of interest are **highly intractable**
 
     - Hard to find compact **representations**
@@ -249,15 +246,15 @@ Notes for preparing MAS exams.
 ## Chapter6&7: Ontologies & Communication
 
 - **Speech act theory**: A theory of how utterances are used to achieve intentions
-  - Representatives: Such as informing, e.g., ‘It is raining’
+  - Representatives: are used to inform an agent about a fact, e.g., ‘It is raining’
 
-  - Directives: Attempts to get the hearer to do something, e.g., ‘please make the tea’
+  - Directives: are used to ask an agent to do something, e.g., ‘please make the tea’
 
-  - Commisives: Which commit the speaker to doing something, e.g., ‘I promise to...’
+  - Commisives: are used to notify an agent (i.e. the hearer) that the communicating agent (i.e. the speaker) is committed to doing something, e.g., ‘I promise to...’
 
-  - Expressives: Whereby a speaker expresses a mental state, e.g., ‘thank you!’
+  - Expressives: are used when an agent expresses a mental state, e.g., ‘thank you!’
 
-  - Declarations: Such as declaring war or naming
+  - Declarations: are used to make a statement which could have implications, e.g. declaring war
 
 - **Semantics**: **precondition-delete-add** list formalism of planning research
 
@@ -310,13 +307,12 @@ Notes for preparing MAS exams.
 - **Cooperative Distributed Problem Solving:** studies how a loosely coupled network of problem solvers can work together to solve problems that are beyond their individual capabilities.
 - **Coherence**: how well the MA system behaves as a unit along some dimension of evaluation
 - **Coordination**: managing inter-dependencies between the activities of agents, coordination relationships between activities could be either positive or negative
-
 - Contract Net:
   - **Recognition**: an agent recognises it has a problem it wants help with
   - **Announcement**: the agent with the task sends out an announcement of the task which includes a specification of the task to be achieved
   - **Bidding**:  Agents that receive the task announcement decide for themselves whether they wish to bid for the task.
-  - **Awarding & Expediting**:  communicated to agents that submitted a bid, The successful contractor then expedites the task, May involve another contract net
-
+  - **Awarding **: The agent that sent task announcement must choose between bids and decide who to “award the contract” to
+  - **Expediting**:  The agent that won the contract now needs to achieve the task and return the results to the agent with the original task 
 - Bid decision: 
   - Contractor $i$ receives an announcement of task specification $ts$, which is for a set of tasks $\tau (ts)$ , the cost to $i$ to carry out is $c_i^t(\tau)$
   - The **marginal cost** of carrying out $\tau$ will be:
@@ -325,9 +321,8 @@ Notes for preparing MAS exams.
 - Handling Inconsistency:
   - Forbidden, For example, in the contract net the only view that matters is that of the manager agent.
   - Resolve inconsistency, argumentation until resolve
-- **Social Norms**: rules of behavior. Achieved by the **Constraint pairs**: $<E',\alpha>$ , a **social law** is **a set of these constrains**
+- **Social Norms**: rules of behaviour. Achieved by the **Constraint pairs**: $<E',\alpha>$ , a **social law** is **a set of these constrains**
 - **Focal states**: $F \subseteq E$​ are the states we want our agent to be able to get to.  A **useful social law** is the one that does not prevent agents from getting from one focal state to another
-
 - **Joint Persistent Goal (JPG)** :  A group of agents have a collective commitment to bring about some goal $\varphi$ and motivation $\psi$   
 
 ## Chapter11: Multi-Agent Competitive
