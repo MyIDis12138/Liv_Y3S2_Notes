@@ -5,10 +5,13 @@ Notes for preparing MAS exams.
 ## Chapter2: Intelligent Agents
 
 - **Predicate Task Specifications**:  specification that assigns Boolean utilities to agent runs, depending on whether the agent succeeded in its task for a run (i.e. the utility is or if it failed (i.e. the utility is 0). 
+
 - Task Environments: a pair of an environment and a Predicate Task Specification 
+
 - Tasks:
   - achievement tasks: The agent succeeds in an achievement task if it can force the environment into one of the goal states
   - maintenance goal:  the agent succeeds in a maintenance task if it ensures that it is never forced into one of the fail states
+  
 - **An agent** is a computer system that is situated in some environment, and that is capable of **autonomous** action in this environment in order to meet its delegated objectives
 
 - Properties of Environments
@@ -16,9 +19,11 @@ Notes for preparing MAS exams.
 - Fully observable vs. partially observable
   - **Fully observable**: the agent can obtain complete, accurate, up-to-date information about the environment’s state
   - Most moderately complex environments  are partially observable
+  
 - Deterministic vs. non-deterministic
   - **Deterministic**: the environment in which any action has a single guaranteed effect – there is no uncertainty about the state that will result from performing an action
   - Environments **stochastic**: the non-determinism using probability theory
+  
 - Static vs. dynamic
   - **Static**: the environment that can be assumed to remain unchanged except by the performance of actions by the agent.
   - A **dynamic** environment is one that has other processes operating on it, and which hence changes in ways beyond the agent’s control
@@ -34,6 +39,7 @@ Notes for preparing MAS exams.
       1. agent can decide what action to perform based only on the current episode
   -  **non-episodic** or **sequential**
     - The current decision affects future decisions
+  
 - **Real time**: time plays a crucial part in evaluating an agent’s performance
 
 - Intelligent Agents
@@ -42,8 +48,11 @@ Notes for preparing MAS exams.
   - **Reactive** (environment aware): maintains an ongoing interaction
   - **Pro-active** (goal-driven): generating and attempting to achieve goals
   - **Social ability**:  the ability to interact with other agents via **cooperation**, **coordination**, **negotiation**
+  
 - Cooperation:  working together as a team to achieve a shared goal
+
 - Coordination:  managing inter-dependencies between the activities of agents
+
 - Negotiation: reach agreements on matters of common interest
 
 - Intentional Systems
@@ -61,18 +70,21 @@ Notes for preparing MAS exams.
   The intentional stance description is useful when it helps us understand the structure of the machine, its past or future behaviour, or how to repair or improve it. It is useful when it helps us explain and predict a complex system’s behaviour without having to understand how the mechanism actually works.
   The main reason that the intentional stance description is useful is that it is a powerful abstraction tool. It allows us to abstract what is happening at the low level within a machine. So instead of describing knowledge a machine has as data stored within a data-structure, or concerning ourselves with the format, we can simply think of that knowledge as a set of beliefs.
 
-- Formal Agent 
-
 - A system is a **pair** containing **an agent** and **an environment**
 
 - Model an agent as a function which maps runs:  $\large Ag: R_E \to Ac$ 
+
 - runs of agent: $\large R(Ag, Env)$
+
 - **behaviourally equivalent** iff:  $R(Ag_1, Env)$= $R(Ag_2, Env)$
+
 - **purely reactive**: They base their decision making entirely on the present
   $\large Ag: E \to Ac$
 
 - perception function: $\large see: E \to Per$
+
 - action-selection function $action$ : $\large action: I \to Ac$ 
+
 - next state function: $next: I \times Per \to I$ 
 
 - task specification: $u: E \to \mathbb R$
@@ -314,7 +326,7 @@ Notes for preparing MAS exams.
   - Forbidden, For example, in the contract net the only view that matters is that of the manager agent.
   - Resolve inconsistency, argumentation until resolve
 - **Social Norms**: rules of behavior. Achieved by the **Constraint pairs**: $<E',\alpha>$ , a **social law** is **a set of these constrains**
-- **Focal states**: $F \subseteq E$​ are the states we want our agent to be able to get to.  A **useful social law** is then one that does not prevent agents from getting from one focal state to another
+- **Focal states**: $F \subseteq E$​ are the states we want our agent to be able to get to.  A **useful social law** is the one that does not prevent agents from getting from one focal state to another
 
 - **Joint Persistent Goal (JPG)** :  A group of agents have a collective commitment to bring about some goal $\varphi$ and motivation $\psi$   
 
@@ -342,7 +354,8 @@ Notes for preparing MAS exams.
 
 - Formally: A strategy $(i^*, j^*)$ is a **pure strategy Nash Equilibrium** solution to the game $(A, B)$ if :
 
-  - $\large \forall i, a_{i^*, j^*} \geq a_{i, j^*} $ and $\large \forall j, b_{i^*, j^*} \geq b_{i^*, j} $. This NE may not unique or exist. 
+  - $\large \forall i, a_{i^*, j^*} \geq a_{i, j^*} $ and $\large \forall j, b_{i^*, j^*} \geq b_{i^*, j} $. 
+  - This NE may not unique or exist. 
 
 - **mixed strategy**:  allows to choose between possible choices by introducing randomness into the solution. Nash proved that **Every finite game has a Nash Equilibrium in mixed strategies**
 
@@ -426,9 +439,9 @@ Notes for preparing MAS exams.
 
 - game property:
 
-  - **superadditive**:  if $v(U) + v(V) \leq v(U\cup V)$, where The coalition that maximises social welfare is the **Grand Coalition**
+  - **superadditive**:  if $v(U) + v(V) \leq v(U\cup V)$, where The coalition that maximizes social welfare is the **Grand Coalition**
 
-  - **subadditive**: $v(U) + v(V) \gt v(U\cup V)$, where The coalition that maximises social welfare is the **Singleton Coalition**
+  - **subadditive**: $v(U) + v(V) \gt v(U\cup V)$, where The coalition that maximizes social welfare is the **Singleton Coalition**
   - neither subadditive nor superadditive, The **characteristic function value calculations** need to be determined **for each of the possible coalition**
 
 - **Stability** is a **necessary** but **not** **sufficient** condition for coalitions to form
@@ -478,10 +491,11 @@ Notes for preparing MAS exams.
 
     ![image-20230515143937044](./Multi-agent system - COMP310.assets/image-20230515143937044.png)
 
-  - the Shapley value: $\large \varphi_i = \sum _{r_C \in rules} \varphi ^r _i$ 
-    ![image-20230515144641489](./Multi-agent system - COMP310.assets/image-20230515144641489.png)
+  - the Shapley value: $\large \varphi_i = \sum _{r_C \in rules} \varphi ^r _i$, where $\large \varphi_i^{1\and...\and l \to x} = \frac{x}{l}$
+    ![image-20230522005543976](./Multi-agent system - COMP310.assets/image-20230522005543976.png)
 
-- **Coalition Structure Generation**:  maximise the social welfare of the system
+- **Coalition Structure Generation**:  maximize the social welfare of the system
+  
   - The optimal coalition structure:
     						$V(CS) = \sum _{C \in CS} v(C)$, where $CS^*=arg\underset{CS} {max} V(CS)$  
 
@@ -628,6 +642,7 @@ Notes for preparing MAS exams.
 
 - Argumentation:  principled techniques for resolving with **inconsistencies** with beliefs of multiple agents
 - **Dung’s Argumentation System (Abstract argumentation)**: 
+  
   - $q \to p$, means argument $q$ attacks argument $p$ 
   - a set of Dung-style arguments: $\langle \sum, \vartriangleright \rangle$ :
     - $\sum$ : set of arguments
@@ -635,7 +650,7 @@ Notes for preparing MAS exams.
     - $(\varphi, \psi) \in \vartriangleright$: the relationship: $\varphi$ attacks $\psi$ 
   - Example: $\langle \{p,q,s,r\},\{{\langle r,q \rangle}, {\langle s,q \rangle}, {\langle q,p \rangle}\} \rangle$
     ![image-20230516214042673](./Multi-agent system - COMP310.assets/image-20230516214042673.png)
-
+  
 - **Type of Positions**: 
   - **Position**: $S \subseteq \sum$ denotes a set of arguments
   - **Conflict free positions**: no member of S attacks an other member of S. e.g. $\empty,\{p\},\{q\},\{r\},\{s\}, \{r,s\}, \{p,r\},\{p,s\},\{r,s,p\}$ in previous $\sum$

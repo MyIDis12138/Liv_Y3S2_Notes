@@ -5,7 +5,7 @@ This is notes of COMP313, Formal Method, which is sorted by lectures.
 ## Lecture 1: Introduction
 
 - Definition of Formal Methods:  formal methods are a particular kind of **mathematically rigorous** techniques for the specification, development and verification of software and hardware systems
-- FM in V-model![image-20230424162017440](C:\Users\10598\AppData\Roaming\Typora\typora-user-images\image-20230424162017440.png)
+- FM in V-model ![image-20230518224306288](./Formal Method - COMP313.assets/image-20230518224306288.png)
 - 3 main parts in COMP313:
   - 'Z' notation
   - Temporal Logic
@@ -31,7 +31,7 @@ This is notes of COMP313, Formal Method, which is sorted by lectures.
   1. Interpretation $I$ is a function mapping atomic propositions to truth values
   2. Semantics of propositional logic is defined as a relation between interpretation $I$ and formula $\varphi$ (check satisfiable between formulas)
 - Validity can be checked using truth tables Truth Table:
-  ![image-20230424164158279](C:\Users\10598\AppData\Roaming\Typora\typora-user-images\image-20230424164158279.png)
+  ![image-20230518224440852](./Formal Method - COMP313.assets/image-20230518224440852.png)
 - Valid VS Satisfiable
   - A formula is **valid**, if it is satisfied by **every interpretation** of its atomic propositions
   - A formula is **satisfiable**, if it is satisfied by **some interpretation** of its atomic propositions. "$I$ satisfies $\varphi$ ", denoted by  𝐼 ⊨ 𝜓
@@ -42,7 +42,7 @@ This is notes of COMP313, Formal Method, which is sorted by lectures.
 
 - Limitation of PL: difficult to **quantify over elements of a domain**, e.g "every person is mortal", then, Introduce FoL
 - Overview of the Syntax of FoL formulas:
-  ![image-20230424171502839](C:\Users\10598\AppData\Roaming\Typora\typora-user-images\image-20230424171502839.png)
+  ![image-20230518224616957](./Formal Method - COMP313.assets/image-20230518224616957.png)
 
 - **Atomic Formulas (AF)**: a combination of predefined variables, constants, functions and predicates that can be evaluated to be either Ture or False
 
@@ -107,7 +107,7 @@ This is notes of COMP313, Formal Method, which is sorted by lectures.
 ## Lecture 5: Functions in Z
 
 - **Function**:  a relation between two sets $T_1$ and $T_2$ that assigns to
-  elements in $T_1$ a single element in $T_2$, that calls many-to-one relations .
+  elements in $T_1$ a single element in $T_2$, that calls many-to-one relations 
 - Function Representations: a set of pairs **{($x_1$,$y_1$) , ($x_2$,$y_2$)}** or  Maplet Notation **{$x_1 \mapsto y_1$,  $x_2 \mapsto y_2$}** 
 - Notation for Functions
   
@@ -204,3 +204,33 @@ This is notes of COMP313, Formal Method, which is sorted by lectures.
   - if $x$ in $B $is false, then $B\#x = 0$ but $B(x)$ is undefined  
 
 ## Lecture 10: Sequence in Z
+
+- Sequence, ordered elements
+- **Filter**:
+  - $\large \sigma | T$ , denotes a sequence $\sigma$ over a set $S$  
+  - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
