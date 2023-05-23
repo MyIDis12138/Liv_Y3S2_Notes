@@ -14,41 +14,40 @@ Notes for preparing MAS exams.
   
 - **An agent** is a computer system that is situated in some environment, and that is capable of **autonomous** action in this environment in order to meet its delegated objectives
 
-- Properties of Environments
+- **Properties of Environments**: 
 
-- Fully observable vs. partially observable
-  - **Fully observable**: the agent can obtain complete, accurate, up-to-date information about the environment’s state
-  - Most moderately complex environments  are partially observable
-  
-- Deterministic vs. non-deterministic
-  - **Deterministic**: the environment in which any action has a single guaranteed effect – there is no uncertainty about the state that will result from performing an action
-  - Environments **stochastic**: the non-determinism using probability theory
-  
-- Static vs. dynamic
-  - **Static**: the environment that can be assumed to remain unchanged except by the performance of actions by the agent.
-  - A **dynamic** environment is one that has other processes operating on it, and which hence changes in ways beyond the agent’s control
+  - Fully observable vs. partially observable
+    - **Fully observable**: the agent can obtain complete, accurate, up-to-date information about the environment’s state
+    - Most moderately complex environments  are partially observable
 
-- Discrete vs. continuous
-  - **discrete**:  there are a fixed, finite number of actions and precepts in it
+  - Deterministic vs. non-deterministic
+    - **Deterministic**: the environment in which any action has a single guaranteed effect – there is no uncertainty about the state that will result from performing an action
+    - Environments **stochastic**: the non-determinism using probability theory
 
-- Episodic vs. non-episodic
-  - **Episodic**: 
-    - 1. Each state is independent of each other.
-      1. An agent’s current action will not affect a future action
-      1. The performance of an agent is dependent on a number of discrete episodes
-      1. agent can decide what action to perform based only on the current episode
-  -  **non-episodic** or **sequential**
-    - The current decision affects future decisions
-  
-- **Real time**: time plays a crucial part in evaluating an agent’s performance
+  - Static vs. dynamic
+    - **Static**: the environment that can be assumed to remain unchanged except by the performance of actions by the agent.
+    - A **dynamic** environment is one that has other processes operating on it, and which hence changes in ways beyond the agent’s control
 
-- Intelligent Agents
+  - Discrete vs. continuous
+    - **discrete**:  there are a fixed, finite number of actions and precepts in it
+
+  - Episodic vs. non-episodic
+    - **Episodic**: 
+      - Each state is independent of each other.
+      - An agent’s current action will not affect a future action
+      - The performance of an agent is dependent on a number of discrete episodes
+      - agent can decide what action to perform based only on the current episode
+
+    - **non-episodic** or **sequential**
+      - The current decision affects future decisions
+
+  - **Real time**: time plays a crucial part in evaluating an agent’s performance
 
 - exhibiting three types of behaviour:
   - **Reactive** (environment aware): maintains an ongoing interaction
   - **Pro-active** (goal-driven): generating and attempting to achieve goals
   - **Social ability**:  the ability to interact with other agents via **cooperation**, **coordination**, **negotiation**
-  
+
 - Cooperation:  working together as a team to achieve a shared goal
 
 - Coordination:  managing inter-dependencies between the activities of agents
@@ -56,7 +55,7 @@ Notes for preparing MAS exams.
 - Negotiation: reach agreements on matters of common interest
 
 - **intentional stance**:  humans use different strategies or stances to explain and predict other entities’ behaviour, **intentional stance** is **an abstraction tool** 
-  
+
 - **intentional system**: whose behaviour can be predicted by the method of attributing belief, desires and rational acumen
 
   - A **first-order** intentional system has beliefs and desires (etc.) but no beliefs and desires about beliefs and desires
@@ -393,11 +392,10 @@ Notes for preparing MAS exams.
 ![image-20230514141017878](./Multi-agent system - COMP310.assets/image-20230514141017878.png)
 
 - **majority graph**: An edge $(i, j)$ if $i$ would beat $j$ in a simple majority election,  an odd number of voters of a graph called **tournament**
-
   - **possible winner** if there is an agenda that will result in it winning overall. In majority graph, a possible winner $w_i$ will have a **path** from $w_i$ to $w_j$ for every other $w_j$ 
-
+  
   - **Condorcet winner**: if it is the overall winner for every possible agenda.  In majority graph, a possible winner $w_i$ will have a **edge** from $w_i$ to $w_j$ for every other $w_j$
-
+  
 - Slater Ranking: If we reserved some edges in a graph, which ordering minimises this inconsistency measure. For last 2, a **cost** of 1 and 2 are produced. **Slater ranking** is the one with **minimal cost**
   ![image-20230514142333694](./Multi-agent system - COMP310.assets/image-20230514142333694.png)![image-20230514142404326](./Multi-agent system - COMP310.assets/image-20230514142404326.png)
 
@@ -595,8 +593,8 @@ Notes for preparing MAS exams.
   - An **encounter** is a collection of tasks $\langle T_1, ..., T_n\rangle$  , where $T_i\subseteq T$ for each agent $i \in Ag$ 
   
 - Deals in TODs"
-  - deal $\delta = \langle D_1, D_2 \rangle $ for encounter $\langle T_1, T_2 \rangle$  , agent $i$ cost: $c(D_i)$
-  - utility of the deal $\delta$ for agent $i$ : $utility_i(\delta) = c(T_i) -c(\delta) $
+  - deal $\delta = \langle D_1, D_2 \rangle $ is a allocation of the tasks $T_1 \cup T_2$ , for encounter $\langle T_1, T_2 \rangle$  , agent $i$ cost: $c(D_i)$
+  - utility of the deal $\delta$ for agent $i$ : $utility_i(\delta) = c(T_i) -cost_i(\delta) $ , where the $cost_i(\delta)$ denotes the cost of agent $i$ in the deal
   - For conflict deal $\Theta $ , $untility_i(\Theta) =0$ , for all agents
   - **dominate deal** $\delta_1 \succ \delta_2$: $ \Bigl\{ \begin{aligned} \forall i\in\{1,2\}, utility_i(\delta_1) \geq utility_i(\delta_2) \\ 
     \exist i\in\{1,2\}, utility_i(\delta_1) > utility_i(\delta_2) \end{aligned}$
@@ -610,15 +608,17 @@ Notes for preparing MAS exams.
   
 - Monotonic Concession Protocol: 
   - Negotiation proceeds in rounds $u$ where $u \geq 0 $  
-  - On the first round:
-    - Both agents **simultaneously** propose a deal from the negotiation set
+  
+  - Procedure:
+    - On round 1, Both agents simultaneously propose a deal from the negotiation set
     - Agreement is reached if one agent finds that the deal proposed by the other is at least as good or better than its proposal
     - If no agreement is reached, then negotiation proceeds to another round of simultaneous proposals
-  - In round $u + 1$: 
-    - Each agent either **concedes** by making a proposal that is better for the other agent than its previous offer, or wait
-    - No agent is allowed to make a proposal that is less preferred by the other agent than the deal it proposed at time $u$ 
+    
+    - In round $u + 1$, no agent is allowed to make a proposal that is less preferred by the other agent than the deal it proposed at time $u$.
+    - If neither agent makes a concession in some round $u>0$, then negotiation terminates with the conflict deal 
+    
   - negotiation is guaranteed to end after a finite number of rounds
-
+  
 - Zeuthen strategy: determine **who** should concede and **how much** in each round, in **Nash Equilibrium**
 
   - Key idea: evaluate an agent’s **willingness to risk conflict**
