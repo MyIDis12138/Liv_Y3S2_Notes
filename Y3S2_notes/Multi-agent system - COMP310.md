@@ -420,7 +420,7 @@ Notes for preparing MAS exams.
 
 - three stages of cooperative action:
 
-  Coalitional structure generation
+  - Coalitional structure generation
 
   - Solving the optimisation problem of each coalition
 
