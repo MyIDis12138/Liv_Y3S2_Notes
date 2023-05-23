@@ -340,9 +340,7 @@ Notes for preparing MAS exams.
 
   ![image-20230511011652705](./Multi-agent system - COMP310.assets/image-20230511011652705.png)
 
-- **Dominant Strategies**: a strategy $s_i$ is **dominant** for agent $i$ if no matter what strategy $s_j$ agent $j$ choose, $i$ will do at least as well playing $s_i$ as it would doing anything else. e.g. the coop is dominates defect for both agents
-
-- A rational agent will never play a dominated strategy
+- **Dominant Strategies**: a strategy $s_i$ is **dominant** for agent $i$ if no matter what strategy $s_j$ agent $j$ choose, $i$ will do at least as well playing $s_i$ as it would doing anything else. e.g. the coop is dominates defect for both agents. A rational agent will never play a dominated strategy
 
 - **Nash Equilibrium (NE)** :  Under the assumption that agent $i$ plays $s_1$ , agent $j$ can do no better than play $s_2$ , either to  agent  $j$ for agent $i$
 
