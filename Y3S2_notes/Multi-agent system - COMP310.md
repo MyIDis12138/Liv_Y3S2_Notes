@@ -509,14 +509,14 @@ Notes for preparing MAS exams.
   - One-shot vs. Iterated Bids
 - Dutch Auction: Starts at a **high price**, and the auctioneer calls out **descending prices**
 
-- Vickrey auction: **second-price sealed-bid** auction. 
+- Vickrey auction: **second-price one-shot sealed-bid** auction. 
   - Each bidder submits a single sealed bid, Bidders do not see the bids made by others; The winning bid is the **highest bid** and pay with **second highest bid** 
   - The payoff of bidder $i$:  $\large p_i = \Bigl\{
     \begin{aligned}
     &v_i - max_{j\neq i}b_j & \text{if } b_i > max_{j \neq i} b_j \\
     &0 & \text{otherwise}
     \end{aligned} \Bigr.$
-  - a **dominant strategy** for each bidder to bid their true valuation, making it possible for **antisocial** behavior
+  - a **dominant strategy** for each bidder to bid their true valuation, making it possible for **antisocial** behaviour
 - None of the auction types discussed so far are immune to **collusion**:
   - A grand coalition of bidders can agree beforehand to collude
   - An auctioneer could employ bogus bidders
@@ -596,17 +596,18 @@ Notes for preparing MAS exams.
   
 - Deals in TODs"
   - deal $\delta = \langle D_1, D_2 \rangle $ for encounter $\langle T_1, T_2 \rangle$  , agent $i$ cost: $c(D_i)$
-  - utility of the deal $\delta$ for agent $i$ : $utility_i(\delta) = c(T_i) -c(D_i) $
+  - utility of the deal $\delta$ for agent $i$ : $utility_i(\delta) = c(T_i) -c(\delta) $
   - For conflict deal $\Theta $ , $untility_i(\Theta) =0$ , for all agents
   - **dominate deal** $\delta_1 \succ \delta_2$: $ \Bigl\{ \begin{aligned} \forall i\in\{1,2\}, utility_i(\delta_1) \geq utility_i(\delta_2) \\ 
     \exist i\in\{1,2\}, utility_i(\delta_1) > utility_i(\delta_2) \end{aligned}$
   - A deal that is **not dominated** by any other deal is **Pareto optimal**
 
 - **Negotiation Set**: 
+  
   - **Individual rational**: agents won’t be interested in deals that give negative utility since they will prefer the conflict deal
   - **Pareto optimal**: agents can always transform a non-Pareto optimal deal into Pareto optimal deal by making one agent happier and none of the others worse off
     ![image-20230516171656387](./Multi-agent system - COMP310.assets/image-20230516171656387.png)
-
+  
 - Monotonic Concession Protocol: 
   - Negotiation proceeds in rounds $u$ where $u \geq 0 $  
   - On the first round:
@@ -629,9 +630,9 @@ Notes for preparing MAS exams.
   - agent can start by proposing its **most preferred deal**,  Concede whenever its **willingness to risk conflict value** $\leq$ to the other agent's
   - If an agreement is reached, it is guaranteed that this agreement will be **individual rational** and **Pareto optimal**
 
-- Ways to be benefited of Deception in TODs:
-  - Phantom and Decoy tasks:  can be prevented by ensuring that tasks are **verifiable**
-  - Hidden tasks: 
+- Ways to be benefited from Deception in TODs:
+  - Phantom and Decoy tasks: Pretending that you have been allocated tasks that you have not, can be prevented by ensuring that tasks are **verifiable**
+  - Hidden tasks: Pretending not to have been allocated tasks that you have
 
 ## Chapter 16: Argumentation
 
