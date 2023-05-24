@@ -226,7 +226,7 @@ Notes for preparing MAS exams.
 
     ![image-20230508230216470](./Multi-agent system - COMP310.assets/image-20230508230216470.png)
 
-- **TouringMachines**:
+- **Touring Machines**:
   - **reactive layer** is implemented as a set of situation-action rules
   - **planning layer** achieves the agent’s proactive behaviour
   - **modelling layer** contains symbolic representations of the
