@@ -573,10 +573,11 @@ Notes for preparing MAS exams.
   - If there is **no agreement**, we say the result is the **conflict deal** $\Theta$ 
 
 - Impatient Players:
+  
   ![image-20230516161904724](./Multi-agent system - COMP310.assets/image-20230516161904724.png)
-
+  
   ![image-20230516162402806](./Multi-agent system - COMP310.assets/image-20230516162402806.png)
-
+  
 - Negotiation Decision Functions:
   - Boulware: Very **slow initial decrease** in price until close to deadline and then an exponential decrease
   - Conceder: **Makes its concessions early**, and makes fewer concessions later in the negotiation
